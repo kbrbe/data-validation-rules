@@ -54,9 +54,9 @@ fields:
         maxCount: 0
       - id: 245$c.pattern
         description: no more 'et al' but 'and X others'.
+        debug: false
         not:
           - pattern: ^.*\b(et al|et. al)\.?\s*$
-            debug: false
   - name: 245n
     path: 245$n
     rules:
@@ -82,11 +82,11 @@ fields:
         minCount: 1
       - id: 300$a.pattern
         description: no more 'p.' but 'pages'. Also error = N. gepag. N. pag. N.p. Non pag.
+        debug: false
         and:
          - minCount: 1
          - not:
            - pattern: ^.*\d+ (p|gepag|pag)\.?\s*$
-             debug: false
   - name: 300b
     path: 300$b
     rules:
